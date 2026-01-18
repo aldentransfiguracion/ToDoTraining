@@ -40,6 +40,7 @@ export const updateTask = authorizedProcedure
         completedDate = new Date();
       }
       if (
+        input.status !== undefined &&
         input.status !== Status.complete &&
         oldTask.status === Status.complete
       ) {
