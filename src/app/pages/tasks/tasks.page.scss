@@ -1,0 +1,59 @@
+main {
+  display: var(--static-display);
+  max-width: var(--static-max-width);
+  margin-inline: var(--static-margin-inline);
+  padding: var(--static-padding);
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+
+  .taskCard {
+    padding: 1rem;
+    background: oklch(28.614% 0.07724 260.287);
+    border-radius: 1rem;
+    height: 200px;
+    overflow: scroll;
+
+    h1 {
+      font-size: 1.4rem;
+      color: oklch(1 0 0);
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 1rem;
+      color: oklch(90.67% 0.0001 271.152);
+      font-weight: 200;
+    }
+  }
+}
+
+.multiline-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* number of lines */
+  overflow: hidden;
+}
+
+.singleline-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* number of lines */
+  overflow: hidden;
+}
+
+.shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
