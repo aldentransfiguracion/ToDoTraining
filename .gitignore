@@ -12,6 +12,7 @@ html
 /node_modules
 npm-debug.log
 yarn-error.log
+/scripts.ts
 
 # IDEs and editors
 .idea/

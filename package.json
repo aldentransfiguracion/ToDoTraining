@@ -25,7 +25,8 @@
     "lint:fix": "ng lint --fix && npm run lint:ng",
     "lint:ng": "ng generate @angular/core:cleanup-unused-imports && ng generate @angular/core:self-closing-tag --defaults",
     "check": "npm run format:check && npm run lint:check && npm run test && npm run e2e && printf \"\\n\\n\\n\\033[1;32mYour code passed the check!\\033[0m\\nFeel free to commit.\\n\"",
-    "check:packages": "npm audit && npm outdated"
+    "check:packages": "npm audit && npm outdated",
+    "run:script": "tsx scripts.ts"
   },
   "private": true,
   "dependencies": {
