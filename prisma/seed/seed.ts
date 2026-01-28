@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { prisma, Status, Task } from '../client';
+import { prisma, Status } from '../server';
 import { deleteSeeds } from './functions/delete';
 import { seedUsers } from './functions/seedUsers';
 import { defineOptions, SeedArguments } from './types';

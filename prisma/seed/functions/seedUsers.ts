@@ -1,4 +1,4 @@
-import { prisma } from '../../client';
+import { prisma } from '../../../prisma/server';
 
 export const seedUsers = async () => {
   await prisma.user.createMany({

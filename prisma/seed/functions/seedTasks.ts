@@ -1,4 +1,4 @@
-import { prisma } from '../../client';
+import { prisma } from '../../../prisma/server';
 
 export const seedTasks = async () => {
   await prisma.task.createMany({
