@@ -20,4 +20,3 @@ RUN curl -fsSL https://deno.land/install.sh | sh \
 
 # Install Playwright
 RUN npx -y playwright install --with-deps
-

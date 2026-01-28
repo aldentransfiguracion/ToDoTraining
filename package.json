@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "ng serve --host=0.0.0.0",
+    "full-reload": "ng cache clean && npm ci && npm run prisma:generate && npm run dev",
     "build": "ng build",
     "build:prod": "npm run prisma:generate && ng build --configuration=production",
     "start:prod": "node dist/server/server.mjs",
@@ -17,7 +18,7 @@
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "e2e": "npm run build:prod && playwright test",
-    "e2e:ui": "playwright test --ui",
+    "e2e:ui": "npm run build:prod && playwright test --ui",
     "e2e:codegen": "npx playwright codegen --viewport-size='1920,1080' localhost:4200",
     "format:check": "prettier . --check",
     "format:fix": "prettier . --check --write ",
@@ -25,8 +26,7 @@
     "lint:fix": "ng lint --fix && npm run lint:ng",
     "lint:ng": "ng generate @angular/core:cleanup-unused-imports && ng generate @angular/core:self-closing-tag --defaults",
     "check": "npm run format:check && npm run lint:check && npm run test && npm run e2e && printf \"\\n\\n\\n\\033[1;32mYour code passed the check!\\033[0m\\nFeel free to commit.\\n\"",
-    "check:packages": "npm audit && npm outdated",
-    "run:script": "tsx scripts.ts"
+    "check:packages": "npm audit && npm outdated"
   },
   "private": true,
   "dependencies": {

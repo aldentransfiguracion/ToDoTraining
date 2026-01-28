@@ -39,6 +39,7 @@
             "ssr": {
               "entry": "src/server.ts"
             },
+            "externalDependencies": ["@prisma/client", "prisma"],
             "loader": {
               ".html": "text"
             }

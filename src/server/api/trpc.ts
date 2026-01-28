@@ -1,7 +1,7 @@
 import { initTRPC, TRPCError } from '@trpc/server';
 import { CreateFastifyContextOptions } from '@trpc/server/adapters/fastify';
 import { Permission, Role, ROLE_PERMISSION_MAP } from '../../security';
-import { prisma } from '../../../prisma/client';
+import { prisma } from '../../../prisma/server';
 import { authService } from '@fhss-web-team/backend-utils';
 import superjson from 'superjson';
 import { Feature, FEATURE_FLAGS } from '../../features';

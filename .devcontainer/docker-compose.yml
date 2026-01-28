@@ -24,8 +24,20 @@ services:
     networks:
       - dev-network
 
+  file-storage:
+    image: localstack/localstack:s3-latest
+    restart: unless-stopped
+    volumes:
+      - './storage-scripts:/etc/localstack/init/ready.d'
+      - 'file-data:/var/lib/localstack'
+    ports:
+      - '4566:4566'
+    networks:
+      - dev-network
+
 volumes:
   postgres-data:
+  file-data:
 
 networks:
   dev-network:

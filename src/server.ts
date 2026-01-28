@@ -18,7 +18,7 @@ import {
 import { appRouter } from './server/api/api.routes';
 import { createContext } from './server/api/trpc';
 import { cronJobs } from './server/cron/cron.jobs';
-import { prisma } from '../prisma/client';
+import { prisma } from '../prisma/server';
 import {
   DEFAULT_HOME_PAGES,
   DEFAULT_ROLE,

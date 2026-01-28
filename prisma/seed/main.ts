@@ -1,4 +1,4 @@
-import { prisma } from '../client';
+import { prisma } from '../server';
 import { options, seed } from './seed';
 import { parseArgs } from 'node:util';
 import { OptionDefinition } from './types';
