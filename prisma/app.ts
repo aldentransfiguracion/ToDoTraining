@@ -1,1 +1,2 @@
-export * from './generated/browser';
+export * from './generated/models';
+export * from './generated/enums';
